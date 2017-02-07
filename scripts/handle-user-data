@@ -86,7 +86,7 @@ prepare_data_partion() {
     done
 
     BOOT2DOCKER_DATA=`echo "${UNPARTITIONED_HD}1"`
-    mkfs.ext4 -i 8192 -L $LABEL $BOOT2DOCKER_DATA
+    mkfs.xfs -L $LABEL $BOOT2DOCKER_DATA
     swapon "${UNPARTITIONED_HD}2"
 }
 
